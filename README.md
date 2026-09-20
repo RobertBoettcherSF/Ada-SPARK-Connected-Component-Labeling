@@ -9,7 +9,7 @@ ICEYE-adjacent use: labeling flood-extent blobs in a binary water mask so each c
 - **4-connectivity** only (von Neumann neighborhood: north/east/south/west). Diagonally touching cells are separate components.
 - Bounded `Max_Rows` / `Max_Cols` (= 2) fixed arrays — no heap, no access types.
 - Multi-pass seed propagation (same style as the flood-fill sheet) instead of union-find, to keep Level-2 proofs tractable.
-- `Label` returns compact ids $1 \ldots Count$; background stays $0$. Postcondition ties every positive label to `Count`.
+- `Label` returns compact ids $1 \ldots Count$; background stays $0$. Postcondition: $Count \le Max\_Rows \times Max\_Cols$.
 
 ## Proof bar
 
